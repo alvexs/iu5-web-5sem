@@ -9,16 +9,22 @@ body {
 header {
    /* margin-left: 30%;*/
    /* margin-right: 30%;*/
-    padding-bottom: 15px;
+   
     border-bottom: solid 1px lightgray;
     margin-top: 20px;
-    text-align: center;
+    
     
 }
 
 .site-name {
+    padding-bottom: 15px;
     font-family: 'Raleway', serif;
     font-size: 50px;
+    width: 50%;
+    margin-left: 25%;
+    display: inline-block;
+    text-align: center;
+    
 }
 
 .wrapper {
@@ -88,4 +94,17 @@ fieldset {
     color:  black;
     float: left;
     padding: 8px 10px;
+}
+
+.user-menu {
+    margin-left: 15%;
+    display: inline-block;
+}
+.user-avatar {
+   /* border: solid 1px black;*/
+    overflow: hidden;
+    height: 50px;
+   
+    border-radius: 50%;
+    vertical-align: -70%;
 }
