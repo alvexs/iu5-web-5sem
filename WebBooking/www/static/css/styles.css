@@ -1,5 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 @import 'https://fonts.googleapis.com/css?family=Exo+2';
+
+
+/* layout styles */
 body {
     font-family: 'Exo 2', sans-serif;
     margin: 0;
@@ -10,39 +13,102 @@ body {
     body {
         font-family: 'Exo 2', sans-serif;
         margin: 0;
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-left: 12%;
+        margin-right: 12%;
 
     }
 }
+
 header {
    /* margin-left: 30%;*/
    /* margin-right: 30%;*/
-   
     border-bottom: solid 1px lightgray;
     margin-top: 20px;
-    
-    
 }
 
 .site-name {
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-family: 'Raleway', serif;
     font-size: 50px;
     width: 50%;
     margin-left: 25%;
     display: inline-block;
     text-align: center;
+}
+
+.user-menu {
+    font-size: 15px; 
+    margin-right: 1%;
+    float: right;
+    margin-top: 8px;
+    text-align: center;
+    overflow: hidden;
+    height: 50px;
+    width: 15%;
+   
+}
+.user-menu:before,
+.user-menu:after {
+	content: "";
+	display: table;
+}
+.user-menu:after {
+	clear: both;
+}
+
+.user-menu > ul {
+    list-style: none;
+    margin: 0;
+    margin-top: 0px;
+    padding: 0;
+    display: block;
+}
+.user-menu > ul:hover {
+    overflow: visible;
+}
+
+.user-menu > ul > li {
+    
+    display: block;
+    margin: 0;
+    margin-top: 5px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border: solid 1px lightgray;
+    border-width: 0px 0px 1px 0px;
+     border-radius: 0px 0px 0px 0px;
+    
+}
+.user-menu ul li:last-child {
+    border-radius: 0 0 0px 0px;
+}
+.user-menu ul li:first-child {
+    margin-top: 0px;
+    padding-top: 16px;
+}
+.user-menu:hover {
+    overflow: visible;
+}
+
+
+.user-avatar {
+   /* border: solid 1px black;*/
+    overflow: hidden;
+    height: 50px;
+    border-radius: 50%;
     
 }
 
 .wrapper {
     margin: 0;
+    margin-top: 3%;
     overflow: auto;
 }
 
+
+/* auth page styles */
 .sign {
-    margin-top: 10%;
+    margin-top: 6%;
     margin-left: 20%;
     margin-right: 20%;
 }
@@ -54,7 +120,6 @@ header {
     font-size: 25px;
 }
 
-
 fieldset {
     padding: 50px;
     padding-top: 30px;
@@ -65,6 +130,7 @@ fieldset {
     border-color: whites;
         
 }
+
 .account-info {
     margin: 0;
 }
@@ -73,7 +139,6 @@ fieldset {
     color: black;
     display: block;
     font-size: 20px;
-    
 }
 
 .account-info input {
@@ -87,7 +152,6 @@ fieldset {
     width: 95%;
     font-size: 20px;
 }
-
 
 .account-info .btn {
     margin-right: 3%;
@@ -104,18 +168,50 @@ fieldset {
     cursor: pointer;
     color:  black;
     float: left;
-    
 }
 
-.user-menu {
-    margin-left: 15%;
-    display: inline-block;
+
+/*Object_list page styles*/
+.add-container {
+    width: 16%;
+    margin-left: 42%;
+    margin-right: 42%;   
+    text-align: center;
 }
-.user-avatar {
-   /* border: solid 1px black;*/
+
+.add-img {
+    height: 70px;
+}
+
+.object-list-container { 
+    margin-top: 1%;
+}
+
+.object-container {
+    margin-bottom: 5%;
+    white-space: nowrap;
     overflow: hidden;
-    height: 50px;
-   
+}
+.obsect-container:last-child {
+    margin-bottom: 0;
+}
+
+.object-img {
+    display: inline-block;
+    overflow: hidden;
+    height: 100px;
     border-radius: 50%;
-    vertical-align: -70%;
+}
+
+.object-info {
+    width: 75%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: 100%;
+    margin-left: 7%;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 25px;
+    color: black;
 }
