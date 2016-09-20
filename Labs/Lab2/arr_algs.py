@@ -1,10 +1,10 @@
 def arr_min(array_):
     temp_array = array_
-    min = temp_array[0]
+    min_value = temp_array[0]
     for x in temp_array:
-        if x < min:
-            min = x
-    print(min)
+        if x < min_value:
+            min_value = x
+    print(min_value)
 
 
 def arr_average(array_):
