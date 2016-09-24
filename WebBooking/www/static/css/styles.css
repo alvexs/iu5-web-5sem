@@ -185,26 +185,31 @@ fieldset {
 
 .object-list-container { 
     margin-top: 1%;
+    max-height: 600px;
+    overflow-y: hidden;
 }
 
 .object-container {
     margin-bottom: 5%;
     white-space: nowrap;
     overflow: hidden;
+    
 }
 .obsect-container:last-child {
     margin-bottom: 0;
+    
 }
 
 .object-img {
     display: inline-block;
     overflow: hidden;
     height: 100px;
+    width: 100px;
     border-radius: 50%;
 }
 
 .object-info {
-    width: 75%;
+    width: 80%;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
@@ -214,4 +219,33 @@ fieldset {
     font-family: 'Exo 2', sans-serif;
     font-size: 25px;
     color: black;
+}
+
+/* Pagination */
+footer {
+text-align: center;
+}
+
+ul.pagination {
+    font-size: 25px;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: #454545;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 45px;
 }
