@@ -275,7 +275,7 @@ ul.pagination li a.active {
 }
 @media screen and (max-width: 1500px) {
     .big-object-info {
-        width: 65%;    
+        width: 75%;    
     }
 }
 
