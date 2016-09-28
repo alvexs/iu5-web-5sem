@@ -8,6 +8,7 @@ body {
     margin: 0;
     margin-left: 25%;
     margin-right: 25%;
+    min-width: 800px;
 }
 @media screen and (max-device-width: 1280px) {
     body {
@@ -47,6 +48,7 @@ header {
     width: 15%;
    
 }
+
 .user-menu:before,
 .user-menu:after {
 	content: "";
@@ -103,6 +105,8 @@ header {
     margin: 0;
     margin-top: 3%;
     overflow: auto;
+    margin-bottom: 1%;
+
 }
 
 
@@ -173,19 +177,17 @@ fieldset {
 
 /*Object_list page styles*/
 .add-container {
-    width: 16%;
-    margin-left: 42%;
-    margin-right: 42%;   
+     
     text-align: center;
 }
 
 .add-img {
-    height: 70px;
+    height: 80px;
 }
 
 .object-list-container { 
     margin-top: 1%;
-    max-height: 600px;
+    height: 600px;
     overflow-y: hidden;
 }
 
@@ -248,4 +250,161 @@ ul.pagination li a.active {
     padding: 8px 16px;
     text-decoration: none;
     font-size: 45px;
+}
+
+/* Object.html */
+.big-object-container {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    height: 500px;
+    display: block;
+    
+}
+
+.big-object-img {
+    float: left;
+    margin-right: 5%;
+    height: 150px;
+    width: 150px;
+}
+
+.big-object-info {
+    float: left;
+    width: 75%;
+    font-size: 20px;
+}
+@media screen and (max-width: 1500px) {
+    .big-object-info {
+        width: 65%;    
+    }
+}
+
+.big-object-row {
+    color: #a2a4ac;
+    margin-top: 50px;
+    height: 20px;
+    width: 100%;
+    display: inline-block;
+}
+.big-object-row:first-child {
+    color: black;
+    height: 50px;
+    margin-bottom: 40px;
+}
+.big-object-row:last-child {
+    color: black;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.flight {
+    float: left;
+}
+
+.flight-number {
+    font-size: 30px;
+    width: 35%;
+    margin-right: 5%;
+}
+.flight-number:before {
+    color: gray;
+    content: "Рейс: ";
+}
+
+.flight-way {
+    width: 59%;
+}
+/* stops */
+.stops {
+    float: left;
+    width: 60%;
+    text-align: center; 
+}
+
+.flight-duration {
+    font-size: 18px;
+}
+
+ul.stop-line {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    position: relative;
+    background-color: #a2a4ac;
+    list-style: none;
+    height: 2px;
+}
+li.stop-line {
+    margin-bottom: 16px;
+    position: relative;
+    top: -7px;
+    float: right;
+    right: -2px;
+    width: 13px;
+    height: 16px;
+    background-image: url(../img/move-to-next.png);
+}
+
+.depart {
+    width: 20%;
+}
+
+.arrive {
+    width: 20%;
+    text-align: right;
+}
+
+.station {
+    color: gray;
+}
+
+/* flight info row2 */
+.flight-info-form {
+    border: solid 1px lightgray;
+    border-width: 0px 0px 0px 1px;
+    border-radius: 0%;
+    height: 100%;   
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    
+}
+.flight-info-form:last-child {
+    border-width: 0 1px 0 1px; 
+}
+.flight-info-form:before {
+    
+}
+
+.content {
+    font-size: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flight-airlines {
+    padding-right: 1%;
+    padding-left: 1%;
+    width: 28%;
+    text-align: center;
+}
+
+.flight-airplane {
+    padding-right: 1%;
+    padding-left: 1%;
+    width: 28%;
+    text-align: center;
+}
+
+.flight-price {
+    padding-right: 1%;
+    padding-left: 1%;
+    text-align: center;
+    width: 34%;
+}
+
+.buy-img {
+    height: 110px;
 }
