@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="description" content="The project for IU5 course 'Web App Dev'">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{% static "css/styles.css" %}">
+    </head>
+    <body>
+        <header>
+            <div class="site-name">Web Booking</div>
+                <div class="user-menu">
+                    <a href="auth.html"><img class="user-avatar" src="{% static "img/avatar_new.png" %}" alt="just user avatar"></a>
+                        <ul>
+                            <li><a>Профиль</a></li>
+                            <li><a>Мои Заказы</a></li>
+                            <li><a>Выход</a></li>
+                        </ul>
+                </div>
+        </header>
+        <div class="wrapper">
+            {% block body %}{% endblock %}
+        </div>
+        <footer>
+            {% block footer %}{% endblock %}
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block title %}Flight {{ flight.id }}{% endblock %}
+{% block body %}
+            <div class="add-container">
+                <a href="{% url 'index' %}"><img class="add-img" src="../static/img/back_button.jpg" alt="back button"></a>
+            </div>
+            <div class="big-object-container">
+                <img class="big-object-img" src="../static/img/s7_logo.png" alt="image for object">
+                <div class="big-object-info">
+                    <div class="big-object-row">
+                        <div class="flight flight-number">SU{{ flight.id }}</div>
+                        <div class="flight flight-way">
+                            <div class="flight depart">
+                                <div class="station">DME</div>
+                                <div class="flight-time">14:00</div>
+                            </div>
+                            <div class="stops">
+                            <span class="flight-duration">6 часов</span>
+                            <ul class="stop-line">
+                                <li class="stop-line"></li>
+                            </ul>
+                            </div>
+                            <div class="flight arrive">
+                                <div class="station">GOE</div>
+                                <div class="flight-time">20:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="big-object-row">
+                        <div class="flight flight-airlines">Авиакомпания</div>
+                        <div class="flight flight-airplane">Самолёт</div>
+                        <div class="flight flight-price">Стоимость</div>
+                    </div>
+                    <div class="big-object-row">
+                        <div class="flight flight-info-form flight-airlines">
+                            <div class="small-row">Siberia</div>
+                            <div class="small-row" id="#airlines-description">Siberia</div>
+                        </div>
+                        <div class="flight flight-info-form flight-airplane">
+                            <div class="small-row">Boeing 777-200</div>
+                            <div class="small-row" id="#airplane-description">safassaafsfsfsfassaf afsasfas fasfa</div>
+                        </div>
+                        <div class="flight flight-info-form flight-price"><div class="content">999999 ₽</div></div>
+                    </div>
+                </div>
+            </div>
+{% endblock %}
+{% block footer %}
+             <a href="objects_list.html"><img class="buy-img" src="../static/img/buy.png" alt="back button"></a>
+{% endblock %}
+    </body>
+</html>
+
+

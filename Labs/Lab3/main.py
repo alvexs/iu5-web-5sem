@@ -1,5 +1,5 @@
 from inheritor_class import MyClient
-import matplotlib.pyplot as plt
+
 
 user_name = input('Введите id пользователя\n')
 obj = MyClient(user_name)
