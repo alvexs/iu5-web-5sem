@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block title %}Flight list{% endblock %}
+{% block body %}
+    {% load staticfiles %}
+    <div class="add-container"><a href=""><img class="add-img" src="{% static "img/PlusLogoWebBooking2.jpg" %}" alt="image for add new object (plus)"></a></div>
+    <div class="object-list-container">
+    {% for airline in airlines %}
+        <div class="object-container">
+            <a href="">
+                <img class="object-img" src="{% static "img/s7_logo.png" %}" alt="image for object"><div class="object-info">{{ airline.description }}</div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+{% block footer %}
+    <ul class="pagination">
+         <li><a href="#">1</a></li>
+         <li><a class="active" href="#">2</a></li>
+         <li><a href="#">3</a></li>
+    </ul>
+{% endblock %}
+
+
