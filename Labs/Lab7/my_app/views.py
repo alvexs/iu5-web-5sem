@@ -20,7 +20,7 @@ def login(request):
                 form.add_error(None, 'invalid login/password')
     else:
         form = LoginForm()
-    return render(request, 'login.html', {'form':form, 'continue': redirect_url})
+    return render(request, 'auth.html', {'form':form, 'continue': redirect_url})
 
 
 def signup(request):

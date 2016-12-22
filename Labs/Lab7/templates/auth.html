@@ -1,16 +1,21 @@
-{% extends layout.html %}
+{% extends 'layout.html' %}
 {% block body %}
-            <form class="sign">
+    {{ form.non_field_errors }}
+           <form action="/login/" method="post" class="sign">
+             {% csrf_token %}
+
                 <fieldset class="account-info">
                     <div class="sign-legend">Авторизация на портале</div>
+
                     <label>
                       <!  Имя пользователя !>
-                        <input type="text" name="username" placeholder="Имя пользователя">
+                        <input type="text" name="login" placeholder="Имя пользователя">
                     </label>
                     <label>
                        <! Пароль !>
                         <input type="password" name="password" placeholder="Пароль">
                     </label>
+
                     <input class="btn" type="submit" name="submit" value="Войти">
                     <input class="btn" type="submit" name="submit" value="Регистрация">
                 </fieldset>
