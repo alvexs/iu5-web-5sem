@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js"></script>
+    <script src='index.js'></script>
+    <title>Lab8-RIP</title>
+    <style type="text/css">
+    button {
+        background-color: white; width: 170px;
+        height: 40px;font-size: 16px;margin-top: 20px;
+    }
+    input{
+        font-size: 14px;
+    }
+    </style>
+</head>
+<body>
+    <div style="float: left; width: 600px; text-align: center; font-size: 20px; margin-top: 50px;">
+        <label> От</label>
+        <input class="from" size = '46'>
+        <br>
+        <label > До </label>
+        <input class="to" size = '46'>
+        <br>
+        <label style="width: 40px">Функция</label>
+        <input list ="functions" class="fun" size = '37'>
+        <datalist id="functions">
+        <option>Math.sin(x)</option>
+        <option>Math.random()</option>
+        <option>Math.exp(x)</option>
+        </datalist>
+        <br>
+
+        <button class="plot" >Построить график</button>
+    </div>
+    <div class="graph" style="width: 500px;height: 500px; float: right; margin-right: 180px;margin-top: 50px;">
+    </div>
+</body>
+</html>
