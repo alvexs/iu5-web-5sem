@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 {% block title %}Flight {{ flight.id }}{% endblock %}
 {% block body %}
+{% if user.is_authenticated %}
             <div class="add-container">
                 <a href="{% url 'index' %}"><img class="add-img" src="../static/img/back_button.jpg" alt="back button"></a>
             </div>
@@ -44,9 +45,16 @@
                     </div>
                 </div>
             </div>
+    {% else %}
+        <div class="site-name">You are not authenticated user
+        <a href="{% url 'login' %}" style="color: black;">Login</a>
+        </div>
+    {% endif %}
 {% endblock %}
 {% block footer %}
-             <a href="objects_list.html"><img class="buy-img" src="../static/img/buy.png" alt="back button"></a>
+    {% if user.is_authenticated %}
+             <a href="{% url 'index' %}"><img class="buy-img" src="../static/img/buy.png" alt="back button"></a>
+     {% endif %}
 {% endblock %}
     </body>
 </html>

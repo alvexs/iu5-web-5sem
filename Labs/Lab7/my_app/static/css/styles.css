@@ -157,6 +157,18 @@ fieldset {
     font-size: 20px;
 }
 
+.account-info a {
+    font-family: 'Exo 2', sans-serif;
+    background: #fff;
+    border-width: 0;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    width: 95%;
+    font-size: 20px;
+}
+
 .account-info .btn {
     margin-right: 3%;
     margin-left: 3%;

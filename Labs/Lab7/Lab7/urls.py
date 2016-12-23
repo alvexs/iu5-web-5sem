@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from my_app.views import index, flight, login, signup
+from django.contrib.auth.views import logout
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -23,9 +24,10 @@ urlpatterns = [
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url( r'^index/', index, name = 'index'),
+    url( r'^index/', index, name='index'),
     url(r'^flight/(?P<id>\d+)', flight, name='flight_url'),
     url(r'^signup/', signup, name='signup'),
     url(r'^login/', login, name='login'),
+    url(r'^logout/', logout, kwargs={'next_page': '/login/'}, name='logout'),
 ]
 

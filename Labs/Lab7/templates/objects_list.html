@@ -1,6 +1,7 @@
 {% extends 'layout.html' %}
 {% block title %}Flight list{% endblock %}
 {% block body %}
+    {% if user.is_authenticated %}
     {% load staticfiles %}
     <div class="add-container"><a href=""><img class="add-img" src="{% static "img/PlusLogoWebBooking2.jpg" %}" alt="image for add new object (plus)"></a></div>
     <div class="object-list-container">
@@ -12,13 +13,20 @@
         </div>
     {% endfor %}
     </div>
+        {% else %}
+        <div class="site-name">You are not authenticated user
+        <a href="{% url 'login' %}" style="color: black;">Login</a>
+        </div>
+    {% endif %}
 {% endblock %}
 {% block footer %}
+    {% if user.is_authenticated %}
     <ul class="pagination">
          <li><a href="#">1</a></li>
          <li><a class="active" href="#">2</a></li>
          <li><a href="#">3</a></li>
     </ul>
+    {% endif %}
 {% endblock %}
 
 
