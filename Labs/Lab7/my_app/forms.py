@@ -25,7 +25,7 @@ class SignupForm(forms.Form):
 
     def clean_email(self):
         email = self.cleaned_data['email']
-        validate_email( self.cleaned_data['email'])
+        validate_email(self.cleaned_data['email'])
         if User.objects.filter(email=email):
             raise ValidationError('Этот email уже зарегистрирован')
         return self.cleaned_data['email']

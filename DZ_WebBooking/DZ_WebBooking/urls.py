@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from my_app.views import index, flight, login, signup
+from my_app.views import index, flight, login, signup, ajax_list
 from django.contrib.auth.views import logout
 
 urlpatterns = [
@@ -29,5 +29,6 @@ urlpatterns = [
     url(r'^signup/', signup, name='signup'),
     url(r'^login/', login, name='login'),
     url(r'^logout/', logout, kwargs={'next_page': '/login/'}, name='logout'),
+    url(r'^ajax_list/(?P<page_id>[0-9]+)$', ajax_list, name='ajax_list'),
 ]
 

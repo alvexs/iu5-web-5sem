@@ -16,4 +16,3 @@ class Airlines2(models.Model):
     name = models.CharField(max_length=50)
     flight_id = models.IntegerField()
     description = models.CharField(max_length=200)
-

@@ -1,18 +1,21 @@
 {% extends 'layout.html' %}
-{% block title %}Flight {{ flight.id }}{% endblock %}
+{% block title %}Flight {{ flight.flight_number }}{% endblock %}
 {% block body %}
+    {% csrf_token %}
 {% if user.is_authenticated %}
+    {% load staticfiles %}
+
             <div class="add-container">
                 <a href="{% url 'index' %}"><img class="add-img" src="../static/img/back_button.jpg" alt="back button"></a>
             </div>
             <div class="big-object-container">
-                <img class="big-object-img" src="../static/img/s7_logo.png" alt="image for object">
+                <img class="big-object-img" src="{% static flight.image_url %}" alt="image for object">
                 <div class="big-object-info">
                     <div class="big-object-row">
-                        <div class="flight flight-number">SU{{ flight.id }}</div>
+                        <div class="flight flight-number">{{ flight.flight_number }}</div>
                         <div class="flight flight-way">
                             <div class="flight depart">
-                                <div class="station">DME</div>
+                                <div class="station">{{ flight.departure_airport }}</div>
                                 <div class="flight-time">14:00</div>
                             </div>
                             <div class="stops">
@@ -22,7 +25,7 @@
                             </ul>
                             </div>
                             <div class="flight arrive">
-                                <div class="station">GOE</div>
+                                <div class="station">{{ flight.arrival_airport }}</div>
                                 <div class="flight-time">20:00</div>
                             </div>
                         </div>
@@ -34,16 +37,20 @@
                     </div>
                     <div class="big-object-row">
                         <div class="flight flight-info-form flight-airlines">
-                            <div class="small-row">Siberia</div>
-                            <div class="small-row" id="#airlines-description">Siberia</div>
+                            <div class="small-row">{{ flight.airlines }}</div>
+                            <div class="small-row" id="#airlines-description">Good Airlines</div>
                         </div>
                         <div class="flight flight-info-form flight-airplane">
-                            <div class="small-row">Boeing 777-200</div>
-                            <div class="small-row" id="#airplane-description">safassaafsfsfsfassaf afsasfas fasfa</div>
+                            <div class="small-row">{{ flight.airplane }}</div>
+                            <div class="small-row" id="#airplane-description"></div>
                         </div>
-                        <div class="flight flight-info-form flight-price"><div class="content">999999 ₽</div></div>
+                        <div class="flight flight-info-form flight-price"><div class="content">{{ flight.cost }}</div></div>
                     </div>
                 </div>
+            </div>
+            <div class="big-object-row" style="margin-top: 0px; margin-left: 26%; font-size: 25px;">
+                <div style="color: darkgray">Этим рейсом так же летят: <button id="bt_load_users" class="btn">Лететь</button></div>
+                <div id="list_of_users" user_state="{{ status }}" style="margin-left: 3%; margin-top: 15px;"></div>
             </div>
     {% else %}
         <div class="site-name">You are not authenticated user
@@ -53,9 +60,9 @@
 {% endblock %}
 {% block footer %}
     {% if user.is_authenticated %}
-             <a href="{% url 'index' %}"><img class="buy-img" src="../static/img/buy.png" alt="back button"></a>
+      <!--      <a href="{% url 'index' %}"><img class="buy-img" src="../static/img/buy.png" alt="back button"></a> --!>
      {% endif %}
 {% endblock %}
-
-
-
+{% block script %}
+<script type="text/javascript" src="{% static 'users.js' %}"></script>
+{% endblock %}

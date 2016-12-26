@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Lab7.urls'
+ROOT_URLCONF = 'DZ_WebBooking.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Lab7.wsgi.application'
+WSGI_APPLICATION = "DZ_WebBooking.wsgi.application"
 
 
 # Database
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'Lab7.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'first_db',
+        'NAME': 'WebBooking_db',
         'USER': 'alex',
         'PASSWORD': '123',
         'HOST': 'localhost',

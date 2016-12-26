@@ -20,7 +20,7 @@ def login(request):
                 form.add_error(None, 'invalid login/password')
     else:
         form = LoginForm()
-    return render(request, 'auth.html', {'form':form, 'continue': redirect_url})
+    return render(request, 'auth.html', {'form': form, 'continue': redirect_url})
 
 
 def signup(request):
@@ -33,6 +33,8 @@ def signup(request):
         form = SignupForm()
     return render(request, 'signup.html', {'form': form,
                                            'type': 'Registration'})
+
+
 def index(request):
     airlines = Airlines2.objects.all()
     return render(request, "objects_list.html", {'airlines': airlines})
